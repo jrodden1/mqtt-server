@@ -5,7 +5,7 @@ services:
     image: eclipse-mosquitto
     container_name: mqtt-shwmon
     volumes:
-      - ./conf:/mosquitto/conf
+      - ./conf:/mosquitto/config
       - ./data:/mosquitto/data
       - ./log:/mosquitto/log
     network_mode: host
