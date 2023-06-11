@@ -9,3 +9,4 @@ services:
     ports:
       - 18830:18830
       - 9001:9001
+    restart: always
