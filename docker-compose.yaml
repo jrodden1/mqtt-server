@@ -1,0 +1,11 @@
+services:
+  mqtt:
+    image: eclipse-mosquitto:latest
+    container_name: mqtt-shwmon
+    env_file:
+      - .env
+    volumes:
+      - mosquitto.conf:./mosquitto.conf
+    ports:
+      - 18830:18830
+      - 9001:9001
