@@ -5,8 +5,8 @@ services:
     env_file:
       - .env
     volumes:
-      - mosquitto.conf:./mosquitto.conf
-    ports:
-      - 18830:18830
-      - 9001:9001
+      - ./conf:/conf
+      - ./data:/data
+      - ./log:/log
+    network_mode: host
     restart: always
